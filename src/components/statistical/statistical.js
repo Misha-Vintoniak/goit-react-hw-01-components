@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import s from './statistical.module.css';
+import s from './Statistical.module.css';
 
 function Statistic({ title, stats }) {
   return (
@@ -29,7 +29,7 @@ function randomColor() {
 }
 
 Statistic.prototype = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   stats: PropTypes.shape({
     id: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,

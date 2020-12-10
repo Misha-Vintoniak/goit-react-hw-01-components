@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
-import s from './transaction.module.css';
+import s from './TransactionHistory.module.css';
 
 function TransactionHistory({ items }) {
-  //   let { id, type, amount, currency } = item
   return (
     <table className={s.transactionHistory}>
       <thead>

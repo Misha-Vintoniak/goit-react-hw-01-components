@@ -1,21 +1,21 @@
-import Profile from './components/profile/profile';
-import user from './components/profile/profile.json';
+import Profile from './Components/Profile/Profile';
+import user from './Components/Profile/Profile.json';
 
-import Statistic from './components/statistical/statistical';
-import statistic from './components/statistical/statistical.json';
+import Statistic from './Components/Statistical/Statistical';
+import statistic from './Components/Statistical/Statistical.json';
 
-import FriendList from './components/friends/friends';
-import friends from './components/friends/friends.json';
+import Friends from './Components/Friends/Friends';
+import friends from './Components/Friends/Friends.json';
 
-import TransactionHistory from './components/transaction/transaction';
-import transaction from './components/transaction/transactions.json';
+import TransactionHistory from './Components/TransactionHistory/TransactionHistory';
+import transaction from './Components/TransactionHistory/Transactions.json';
 
 import './App.css';
 
 function App() {
   return (
     <>
-      <div className="task">
+      <div>
         <Profile
           name={user.name}
           tag={user.tag}
@@ -24,14 +24,14 @@ function App() {
           stats={user.stats}
         />
       </div>
-      <div className="task">
+      <div>
         <Statistic title="Upload stats" stats={statistic} />
         <Statistic stats={statistic} />
       </div>
-      <div className="task">
-        <FriendList friends={friends} />
+      <div>
+        <Friends friends={friends} />
       </div>
-      <div className="task">
+      <div>
         <TransactionHistory items={transaction} />;
       </div>
     </>

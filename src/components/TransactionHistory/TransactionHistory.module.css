@@ -1,8 +1,9 @@
 .transactionHistory {
+  width: 420px;
   padding: 10px;
-  width: 100%;
+  margin-left: 10%;
+  background-color: #c5d0e6;
   text-align: center;
-  margin: 10px 0 0 0;
 }
 thead {
   background-color: #00bcd5;
