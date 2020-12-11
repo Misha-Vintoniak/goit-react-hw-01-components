@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import s from './Statistical.module.css';
 
-function Statistic({ title, stats }) {
+function Statistical({ title, stats }) {
   return (
     <section className={s.statistics}>
       {title && <h2 className="title">Upload stats</h2>}
@@ -28,12 +28,14 @@ function randomColor() {
   return Math.random() * 255;
 }
 
-Statistic.prototype = {
+Statistical.prototype = {
   title: PropTypes.string,
-  stats: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
-    percentage: PropTypes.number.isRequired,
-  }),
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    }),
+  ).isRequired,
 };
-export default Statistic;
+export default Statistical;
